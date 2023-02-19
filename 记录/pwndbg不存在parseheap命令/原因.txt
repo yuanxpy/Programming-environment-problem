@@ -1,0 +1,1 @@
+简单来说就是parseheap是pwngdb的命令而不是pwndbg的命令

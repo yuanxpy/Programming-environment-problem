@@ -1,0 +1,6 @@
+
+可以安装gdb的pwndbg插件
+
+b *$rebase(0x相对基址偏移)
+
+eg: b *$rebase(0xbf2)

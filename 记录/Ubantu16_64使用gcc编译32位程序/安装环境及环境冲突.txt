@@ -1,0 +1,16 @@
+这个问题比较好解决：
+
+
+sudo apt-get install build-essential module-assistant gcc-multilib g++-multilib   即可
+
+
+但是我安装后还是不成功，突然注意到我的gcc版本是9，回想原来是编译patchelf时安装了两个版本的gcc，导致失败，若想成功编译
+
+只需要在
+
+将
+gcc -m32 -fno-stack-protector -z execstack -no-pie -o pwn1 attachment.c
+换成
+gcc-5 -m32 -fno-stack-protector -z execstack -no-pie -o pwn1 attachment.c
+
+即可

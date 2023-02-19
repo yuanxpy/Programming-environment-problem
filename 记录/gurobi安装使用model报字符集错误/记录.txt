@@ -1,0 +1,14 @@
+忘记截图了，这里就直接记录了
+
+就是按照网上安装步骤python setup.py install进行安装（已经激活认证），import也正常但是使用Model函数就会报这个错
+
+Traceback (most recent call last):
+File "src\gurobipy\extern.pxi", line 19, in gurobipy.__bytestostring
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc1 in position 28: invalid start byte
+Exception ignored in: 'gurobipy.logcallbackstub'
+Traceback (most recent call last):
+File "src\gurobipy\extern.pxi", line 19, in gurobipy.__bytestostring
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc1 in position 28: invalid start byte
+
+
+后来看到网上有人说目录不能有空格，就卸载重装了，不确定是不是这个原因，我安装目录里面有空格，所以我卸载后重新安装了，而且这次没用setup.py而是直接把python39目录下的文件复制到了python对应库目录下，这次就可以了（不用setup.py的原因是这个setup.py好像不提供remove的功能，准备先试试直接复制，不行再setup.py）

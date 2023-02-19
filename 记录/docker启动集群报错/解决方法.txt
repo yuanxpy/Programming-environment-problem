@@ -1,0 +1,15 @@
+用docker composer启动docker集群时报错：
+
+ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket - is it running?
+
+应该是docker后台服务没有开启
+
+
+Ubuntu上的解决办法：http://blog.csdn.net/kongxx/article/details/43481573#comments
+
+CentOS7上的解决办法：https://docs.docker.com/articles/systemd/
+
+我在centos7环境，直接执行
+
+systemctl start docker
+再次启动docker集群，问题解决

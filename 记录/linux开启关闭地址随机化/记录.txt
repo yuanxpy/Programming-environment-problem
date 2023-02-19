@@ -1,0 +1,8 @@
+cat /proc/sys/kernel/randomize_va_space
+
+0 = 关闭
+1 = 半随机。共享库、栈、mmap() 以及 VDSO 将被随机化。（留坑，PIE会影响heap的随机化。。）
+2 = 全随机。除了1中所述，还有heap。
+
+
+echo 0 > /proc/sys/kernel/randomize_va_space

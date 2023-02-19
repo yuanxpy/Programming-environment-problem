@@ -1,0 +1,6 @@
+将如下命令写入 ~/.gdbinit即可
+set follow-fork-mode parent
+
+
+查看当前模式：
+show follow-fork-mode
